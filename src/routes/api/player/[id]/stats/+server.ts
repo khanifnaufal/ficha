@@ -36,10 +36,7 @@ export const GET: RequestHandler = async (event) => {
 	if (seasonParam !== null) {
 		const parsedSeason = seasonSchema.safeParse(seasonParam);
 		if (!parsedSeason.success) {
-			return json(
-				{ error: 'Season must be a 4-digit numeric year (e.g. 2024).' },
-				{ status: 400 }
-			);
+			return json({ error: 'Season must be a 4-digit numeric year (e.g. 2024).' }, { status: 400 });
 		}
 		season = parsedSeason.data;
 	}

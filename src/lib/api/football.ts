@@ -2,12 +2,13 @@ import axios from 'axios';
 import { z } from 'zod';
 import { serverEnv } from '../server/env';
 import { get as cacheGet, set as cacheSet, CACHE_TTLS } from '../utils/cache';
-import { ApiFootballPlayerResponseSchema, ApiFootballStatisticsSchema } from '../schemas/apiFootball';
+import {
+	ApiFootballPlayerResponseSchema,
+	ApiFootballStatisticsSchema
+} from '../schemas/apiFootball';
 import type { ApiFootballPlayerResponse } from '../schemas/apiFootball';
 
-export type FetchResult<T> =
-	| { data: T; error: null }
-	| { data: null; error: string };
+export type FetchResult<T> = { data: T; error: null } | { data: null; error: string };
 
 const apiFootballClient = axios.create({
 	baseURL: serverEnv.API_FOOTBALL_URL,
@@ -188,7 +189,8 @@ function extractApiFootballError(data: unknown): string | null {
 		if (keys.length > 0) {
 			return keys
 				.map(
-					(k) => `${k}: ${typeof errRecord[k] === 'string' ? errRecord[k] : JSON.stringify(errRecord[k])}`
+					(k) =>
+						`${k}: ${typeof errRecord[k] === 'string' ? errRecord[k] : JSON.stringify(errRecord[k])}`
 				)
 				.join(', ');
 		}
@@ -292,9 +294,7 @@ export async function getPlayerStats(
 	}
 }
 
-export async function getPlayerForm(
-	id: number
-): Promise<FetchResult<ApiFootballFixturesResponse>> {
+export async function getPlayerForm(id: number): Promise<FetchResult<ApiFootballFixturesResponse>> {
 	const cacheKey = `fb:form:${id}`;
 	const cached = cacheGet<ApiFootballFixturesResponse>(cacheKey);
 	if (cached) {

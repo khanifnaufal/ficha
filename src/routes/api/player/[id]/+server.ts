@@ -52,10 +52,7 @@ export const GET: RequestHandler = async (event) => {
 	}
 
 	try {
-		const merged = mergePlayerData(
-			profileResult.data,
-			tmResult.data
-		);
+		const merged = mergePlayerData(profileResult.data, tmResult.data);
 		return json(merged);
 	} catch (err: unknown) {
 		const msg = err instanceof Error ? err.message : 'Unknown merge error';

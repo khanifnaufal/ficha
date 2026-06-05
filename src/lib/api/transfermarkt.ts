@@ -9,9 +9,7 @@ import {
 } from '../schemas/transfermarkt';
 import type { TransfermarktPlayerResponse } from '../schemas/transfermarkt';
 
-export type FetchResult<T> =
-	| { data: T; error: null }
-	| { data: null; error: string };
+export type FetchResult<T> = { data: T; error: null } | { data: null; error: string };
 
 // Dynamic Host extraction from configured URL
 const transfermarktHost = new URL(serverEnv.TRANSFERMARKT_URL).host;
