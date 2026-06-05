@@ -11,9 +11,15 @@ importers:
       axios:
         specifier: ^1.17.0
         version: 1.17.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       layerchart:
         specifier: ^1.0.13
         version: 1.0.13(svelte@5.56.2(@typescript-eslint/types@8.60.1))(typescript@6.0.3)
+      tailwind-merge:
+        specifier: ^3.6.0
+        version: 3.6.0
       zod:
         specifier: ^4.4.3
         version: 4.4.3
