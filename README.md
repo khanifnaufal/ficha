@@ -1,6 +1,6 @@
 # Ficha ⚽
 
-**Ficha** is a premium, state-of-the-art Football Player Dashboard designed for scouting, analysis, and player comparisons. The name **Ficha** is derived from the Spanish word for **"player card"** (*ficha de jugador*), capturing the core essence of the application: a comprehensive, visually rich digital trading card and performance dashboard for football players worldwide.
+**Ficha** is a premium, state-of-the-art Football Player Dashboard designed for scouting, analysis, and player comparisons. The name **Ficha** is derived from the Spanish word for **"player card"** (_ficha de jugador_), capturing the core essence of the application: a comprehensive, visually rich digital trading card and performance dashboard for football players worldwide.
 
 Built using a modern, reactive stack powered by **SvelteKit**, **Tailwind CSS v4**, and **LayerChart**, Ficha aggregates live football data and transfer market insights to deliver deep analytical profiles of players, teams, and matches.
 
@@ -14,7 +14,7 @@ Built using a modern, reactive stack powered by **SvelteKit**, **Tailwind CSS v4
 - **Data Validation:** Zod
 - **Visualizations:** LayerChart & LayerCake (D3-based charts)
 - **HTTP Client:** Axios
-- **APIs:** 
+- **APIs:**
   - API-Football (RapidAPI) for live stats, rosters, fixture details, and ratings.
   - Transfermarkt API (Local Docker instance) for player market values, transfer history, and contract info.
 
@@ -29,11 +29,13 @@ Make sure you have **Node.js** (v18+) and **pnpm** installed on your machine.
 ### Installation
 
 1. Clone the repository and navigate to the project directory:
+
    ```bash
    cd ficha
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
@@ -46,6 +48,7 @@ Make sure you have **Node.js** (v18+) and **pnpm** installed on your machine.
 ### Running the Development Server
 
 Start the local server with hot-module replacement (HMR):
+
 ```bash
 pnpm run dev
 ```
@@ -57,7 +60,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 ## 🗺️ Roadmap & Phases
 
 ### 📌 Phase 1 — MVP (Minimum Viable Product)
+
 **Goal:** Search for a player, view basic stats and market value.
+
 - [ ] Setup API-Football integration (RapidAPI credentials & endpoints testing).
 - [ ] Setup Transfermarkt API via local Docker instance.
 - [ ] Implement Zod schemas for both API response validation.
@@ -66,7 +71,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] Create the Player Profile page featuring photo, name, club, position, nationality, age, and basic details.
 - [ ] Design basic stats cards (goals, assists, appearances, minutes played).
 - [ ] Fetch and display market value from Transfermarkt.
-- [ ] Enable Default Dark Mode utilizing the bespoke *Ficha* color palette.
+- [ ] Enable Default Dark Mode utilizing the bespoke _Ficha_ color palette.
 - [ ] **[Security]** Environment variable validation at startup using Zod.
 - [ ] **[Security]** Zod parsing in every `+server.ts` endpoint to reject malformed requests.
 - [ ] **[Security]** Never expose the RapidAPI key to the client; routing all third-party calls through the server.
@@ -74,7 +79,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Add an API secret verification header between SvelteKit and the Transfermarkt container.
 
 ### 🔍 Phase 2 — Player Deep Dive
+
 **Goal:** In-depth player performance analysis.
+
 - [ ] Implement Season selector.
 - [ ] Implement Competition filters (overall vs. league specific).
 - [ ] Calculate and display normalized stats per 90 minutes.
@@ -93,7 +100,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Prevent path traversal attacks inside the dynamic route handler `[id]`.
 
 ### 📊 Phase 3 — Visualizations & Charts
+
 **Goal:** Turn statistics into intuitive visual layouts.
+
 - [ ] Bar chart for goals/assists progression per season.
 - [ ] Line chart plotting form/ratings throughout the season.
 - [ ] Radar chart mapping attributes (attacking, defending, passing, physical, mental).
@@ -107,7 +116,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Never render raw HTML strings from API responses directly.
 
 ### ⚖️ Phase 4 — Comparison & Scouting
+
 **Goal:** Side-by-side player comparisons and scouting tools.
+
 - [ ] Multi-player comparison dashboard (2 players side-by-side).
 - [ ] Overlaid radar charts comparing attributes.
 - [ ] Per 90-minute stats comparison (normalized, not raw values).
@@ -120,7 +131,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Set stricter rate limits on comparison endpoints due to heavier API aggregation overhead.
 
 ### 🏆 Phase 5 — Team & League View
+
 **Goal:** Expand focus from individual players to teams and competitions.
+
 - [ ] Team Overview pages (squad list, formations, overall stats).
 - [ ] Top scorers and top assisters per league tables.
 - [ ] Live league standings.
@@ -133,7 +146,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Cache server-side API responses to minimize direct hits to external APIs.
 
 ### 🏁 Phase 6 — Match Center
+
 **Goal:** Live match tracking and historical match stats.
+
 - [ ] Match results and scoreboard.
 - [ ] Interactive lineup configurations and tactical layouts.
 - [ ] Individual player ratings per match.
@@ -145,7 +160,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Apply strict rate limiting on live updates endpoints (enforce a minimum polling interval of 30 seconds).
 
 ### ✨ Phase 7 — UX & Polish
+
 **Goal:** Elevate look, feel, and performance to a commercial product standard.
+
 - [ ] Implement loading skeleton placeholders.
 - [ ] Informative error pages (e.g., player not found, API rate-limits, downtime).
 - [ ] Delightful empty states with micro-illustrations.
@@ -162,7 +179,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Avoid leaking database/internal player IDs in share links (use slugs or hashed IDs instead).
 
 ### 👤 Phase 8 — Personalization
+
 **Goal:** Enable user personalization options.
+
 - [ ] Bookmarked/Favorite players quick-lists.
 - [ ] Followed teams feed.
 - [ ] Search query history log.
@@ -175,7 +194,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Limit notification dispatch rates to prevent user spam.
 
 ### 🧠 Phase 9 — AI Features
+
 **Goal:** Distinctive AI-powered scouting and predictions.
+
 - [ ] AI-generated scouting reports summarizing performance.
 - [ ] Player form/growth prediction engine.
 - [ ] Natural Language Search ("young striker in La Liga with high goals per 90").
@@ -188,7 +209,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 - [ ] **[Security]** Ensure no personal or sensitive user data is forwarded to third-party AI models.
 
 ### 🔌 Phase 10 — Backend & Scale
+
 **Goal:** Production ready architecture.
+
 - [ ] Drizzle ORM + PostgreSQL integration for caching and data persistence.
 - [ ] Better Auth integration for user account management.
 - [ ] API rate-limiting rules and robust retry handling mechanisms.
