@@ -3,6 +3,7 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* ── Design Tokens ── */
 @theme {
 	--color-bg: var(--color-bg);
 	--color-surface: var(--color-surface);
@@ -14,8 +15,10 @@
 	--color-text: var(--color-text);
 	--color-text-muted: var(--color-text-muted);
 	--color-border: var(--color-border);
+	--color-on-gold: var(--color-on-gold);
 }
 
+/* ── Dark Mode (default) ── */
 :root {
 	--color-bg: #111210;
 	--color-surface: #161a14;
@@ -27,8 +30,11 @@
 	--color-text: #e8e4d8;
 	--color-text-muted: #9a9488;
 	--color-border: rgba(201, 168, 76, 0.15);
+	/* Text color to use ON gold/colored fills */
+	--color-on-gold: #0d0d0d;
 }
 
+/* ── Light Mode ── */
 .light {
 	--color-bg: #f7f5ee;
 	--color-surface: #ffffff;
@@ -36,12 +42,15 @@
 	--color-gold: #a67c2e;
 	--color-gold-light: #7a5a1e;
 	--color-green: #1e6b35;
-	--color-green-light: #dff0e4;
+	--color-green-dark: #c6e8d1;
 	--color-text: #1a1a18;
 	--color-text-muted: #6b6860;
 	--color-border: rgba(0, 0, 0, 0.08);
+	/* Text color to use ON gold/colored fills */
+	--color-on-gold: #1a1a18;
 }
 
+/* ── Base ── */
 html,
 body {
 	background-color: var(--color-bg);
@@ -70,4 +79,25 @@ h4,
 h5,
 h6 {
 	font-family: 'Outfit', sans-serif;
+}
+
+/* ── Scrollbar ── */
+.scrollbar-none::-webkit-scrollbar {
+	display: none;
+}
+.scrollbar-none {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* ── Select element: respect theme colors ── */
+select {
+	color: var(--color-text);
+	background-color: var(--color-surface-raised);
+	border-color: var(--color-border);
+}
+
+select option {
+	background-color: var(--color-surface-raised);
+	color: var(--color-text);
 }

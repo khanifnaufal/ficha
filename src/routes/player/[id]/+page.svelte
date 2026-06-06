@@ -71,6 +71,11 @@
 	// Safe image fallback
 	let imageFailed = $state(false);
 
+	$effect(() => {
+		data;
+		imageFailed = false;
+	});
+
 	// Generate realistic match form tracker history based on player average rating
 	function generateMockMatches(playerRating: string | number | null, leagueName: string): MatchFormItem[] {
 		const avgRating = playerRating ? parseFloat(String(playerRating)) : 6.8;
@@ -271,7 +276,7 @@
 								disabled={$navigating !== null}
 								class="rounded-lg border border-border bg-surface-raised px-3 py-1.5 text-xs font-semibold text-text shadow-sm outline-none focus:border-gold/50 cursor-pointer disabled:opacity-50"
 							>
-								{#each ['2024', '2023', '2022', '2021', '2020'] as season (season)}
+								{#each ['2025', '2024', '2023', '2022', '2021', '2020'] as season (season)}
 									<option value={season}>{season}/{parseInt(season) + 1}</option>
 								{/each}
 							</select>
@@ -289,7 +294,7 @@
 										<button
 											type="button"
 											onclick={() => (selectedCompetition = 'All')}
-											class="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200 select-none {selectedCompetition === 'All' ? 'bg-gold text-[#0d0d0d] font-bold shadow-md' : 'bg-surface-raised border border-border text-text-muted hover:text-text'}"
+											class="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200 select-none {selectedCompetition === 'All' ? 'bg-gold text-on-gold font-bold shadow-md' : 'bg-surface-raised border border-border text-text-muted hover:text-text'}"
 										>
 											All
 										</button>
@@ -297,7 +302,7 @@
 											<button
 												type="button"
 												onclick={() => (selectedCompetition = comp)}
-												class="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200 select-none {selectedCompetition === comp ? 'bg-gold text-[#0d0d0d] font-bold shadow-md' : 'bg-surface-raised border border-border text-text-muted hover:text-text'}"
+												class="rounded-full px-3 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200 select-none {selectedCompetition === comp ? 'bg-gold text-on-gold font-bold shadow-md' : 'bg-surface-raised border border-border text-text-muted hover:text-text'}"
 											>
 												{comp}
 											</button>

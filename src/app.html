@@ -3,7 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="text-scale" content="scale" />
+		<meta name="description" content="Ficha - Football intelligence, player by player. Search and explore deep player statistics, market values, transfers, and match history." />
+		<!-- Prevent flash of wrong theme: apply saved preference before first paint -->
+		<script>
+			(function () {
+				try {
+					var theme = localStorage.getItem('ficha_theme');
+					if (theme === 'light') {
+						document.documentElement.classList.add('light');
+					}
+				} catch (e) {}
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

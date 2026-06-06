@@ -17,8 +17,10 @@ export const ApiFootballPlayerSchema = z.object({
 	height: z.string().nullable().optional(),
 	weight: z.string().nullable().optional(),
 	injured: z.boolean().nullable().optional().default(false),
-	photo: z.string().url().nullable().optional()
+	photo: z.string().url().nullable().optional(),
+	position: z.string().nullable().optional()
 });
+
 
 export const ApiFootballTeamSchema = z.object({
 	id: z.number(),

@@ -26,7 +26,7 @@
 			<div
 				class="h-7 w-7 rounded-full border cursor-help transition-all duration-300 hover:scale-120 hover:z-10 flex items-center justify-center {getRatingColorClass(match.rating)}"
 			>
-				<span class="text-[10px] font-bold text-[#0d0d0d] select-none">
+				<span class="text-[10px] font-bold text-on-gold select-none">
 					{match.rating.toFixed(1)}
 				</span>
 			</div>

@@ -38,7 +38,8 @@ export const GET: RequestHandler = async (event) => {
 			birth: item.player.birth,
 			height: item.player.height,
 			weight: item.player.weight,
-			injured: item.player.injured
+			injured: item.player.injured,
+			position: item.player.position
 		},
 		statistics: item.statistics // empty [] from /profiles, that's fine
 	}));

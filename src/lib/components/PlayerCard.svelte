@@ -9,12 +9,44 @@
 	const player = $derived(playerItem.player);
 	const stats = $derived(playerItem.statistics);
 
-	const clubName = $derived(stats?.[0]?.team?.name || 'Unknown Club');
-	const position = $derived(stats?.[0]?.games?.position || 'Unknown Position');
+	// Position fallbacks to player.position
+	const position = $derived(stats?.[0]?.games?.position || player.position || 'Unknown Position');
 	const flag = $derived(getFlagEmoji(player.nationality));
+
+	// Reactive club details
+	let clubName = $state('Loading...');
+	let clubLogo = $state<string | null>(null);
 
 	// Safe image error state handler
 	let imageFailed = $state(false);
+
+	$effect(() => {
+		if (stats && stats.length > 0 && stats[0].team?.name) {
+			clubName = stats[0].team.name;
+			clubLogo = stats[0].team.logo || null;
+		} else {
+			fetch(`/api/player/${player.id}/team`)
+				.then((res) => {
+					if (res.ok) return res.json();
+					throw new Error();
+				})
+				.then((data) => {
+					clubName = data.clubName || 'Unknown Club';
+					clubLogo = data.clubLogo || null;
+				})
+				.catch(() => {
+					clubName = 'Unknown Club';
+					clubLogo = null;
+				});
+		}
+	});
+
+	// Reset image error state when player changes to prevent getting stuck on initials
+	$effect(() => {
+		player.id;
+		player.photo;
+		imageFailed = false;
+	});
 
 	function handleSave() {
 		savePlayerToRecent({
@@ -67,7 +99,12 @@
 			</span>
 		</div>
 		<div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-text-muted">
-			<span class="truncate font-medium">{clubName}</span>
+			<div class="flex items-center gap-1 min-w-0">
+				{#if clubLogo}
+					<img src={clubLogo} alt={clubName} class="h-3.5 w-3.5 object-contain shrink-0" />
+				{/if}
+				<span class="truncate font-medium">{clubName}</span>
+			</div>
 			<span class="hidden h-1 w-1 rounded-full bg-text-muted/40 sm:inline"></span>
 			<span
 				class="rounded-full border border-border bg-surface-raised px-2 py-0.5 text-[10px] font-semibold tracking-wider text-gold-light uppercase"

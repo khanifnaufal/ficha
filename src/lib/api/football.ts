@@ -31,6 +31,7 @@ export interface ApiPlayerProfile {
 	weight: string | null;
 	injured: boolean;
 	photo: string | null;
+	position: string | null;
 }
 
 export interface ApiPlayerStatistics {
@@ -190,7 +191,8 @@ function normalizePlayerItem(raw: Record<string, unknown>): ApiPlayerItem {
 			height: p.height ? String(p.height) : null,
 			weight: p.weight ? String(p.weight) : null,
 			injured: Boolean(p.injured),
-			photo: p.photo ? String(p.photo) : null
+			photo: p.photo ? String(p.photo) : null,
+			position: p.position ? String(p.position) : null
 		},
 		statistics: stats
 	};
@@ -329,6 +331,53 @@ export async function getPlayerTransfers(
 		return { data: null, error: extractNetworkError(err) };
 	}
 }
+
+export interface ApiPlayerTeam {
+	team: {
+		id: number;
+		name: string;
+		logo: string | null;
+	};
+	seasons: number[];
+}
+
+/**
+ * Fetches the list of teams the player has played for.
+ * Endpoint: GET /players/teams?player={id}
+ */
+export async function getPlayerTeams(
+	id: number
+): Promise<FetchResult<ApiPlayerTeam[]>> {
+	const cacheKey = `apif:player-teams:${id}`;
+	const cached = cacheGet<ApiPlayerTeam[]>(cacheKey);
+	if (cached) return { data: cached, error: null };
+
+	try {
+		const response = await footballClient.get('/players/teams', {
+			params: { player: id }
+		});
+
+		const rawItems: Record<string, unknown>[] = response.data?.response ?? [];
+		const teams: ApiPlayerTeam[] = rawItems.map((item) => {
+			const teamObj = (item.team ?? {}) as Record<string, unknown>;
+			const seasonsArr = ((item.seasons ?? []) as unknown[]).map(Number).filter((s) => !isNaN(s));
+			return {
+				team: {
+					id: safeNum(teamObj.id),
+					name: String(teamObj.name ?? ''),
+					logo: teamObj.logo ? String(teamObj.logo) : null
+				},
+				seasons: seasonsArr
+			};
+		});
+
+		cacheSet(cacheKey, teams, CACHE_TTLS.MARKET_VALUE); // 7 days
+		return { data: teams, error: null };
+	} catch (err) {
+		return { data: null, error: extractNetworkError(err) };
+	}
+}
+
 
 // ─── Backward-compat shims (keep old imports working) ─────────────────────────
 export type ApiFootballPlayerResponse = { response: ApiPlayerItem[] };

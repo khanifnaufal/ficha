@@ -1,0 +1,2160 @@
+{
+  "apif:transfers:109026": {
+    "value": [
+      {
+        "date": "2016-07-01",
+        "type": "N/A",
+        "teams": {
+          "in": {
+            "id": 4309,
+            "name": "Sonsonate",
+            "logo": "https://media.api-sports.io/football/teams/4309.png"
+          },
+          "out": {
+            "id": 4301,
+            "name": "Chalatenango",
+            "logo": "https://media.api-sports.io/football/teams/4301.png"
+          }
+        }
+      },
+      {
+        "date": "2013-01-01",
+        "type": "N/A",
+        "teams": {
+          "in": {
+            "id": 4299,
+            "name": "Alianza",
+            "logo": "https://media.api-sports.io/football/teams/4299.png"
+          },
+          "out": {
+            "id": 3660,
+            "name": "Deportivo Petapa",
+            "logo": "https://media.api-sports.io/football/teams/3660.png"
+          }
+        }
+      },
+      {
+        "date": "2012-01-19",
+        "type": "N/A",
+        "teams": {
+          "in": {
+            "id": 3660,
+            "name": "Deportivo Petapa",
+            "logo": "https://media.api-sports.io/football/teams/3660.png"
+          },
+          "out": {
+            "id": 4299,
+            "name": "Alianza",
+            "logo": "https://media.api-sports.io/football/teams/4299.png"
+          }
+        }
+      }
+    ],
+    "expiry": 1781319113115
+  },
+  "apif:search:foden": {
+    "value": [
+      {
+        "player": {
+          "id": 631,
+          "name": "P. Foden",
+          "firstname": "Philip Walter",
+          "lastname": "Foden",
+          "age": 26,
+          "birth": {
+            "date": "2000-05-28",
+            "place": "Stockport",
+            "country": "England"
+          },
+          "nationality": "England",
+          "height": "171",
+          "weight": "63",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/631.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 382926,
+          "name": "D. Foden",
+          "firstname": "Daniel",
+          "lastname": "Foden",
+          "age": 20,
+          "birth": {
+            "date": "2005-07-21",
+            "place": null,
+            "country": "England"
+          },
+          "nationality": "England",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/382926.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 18270,
+          "name": "M. Foden",
+          "firstname": "Mark",
+          "lastname": "Foden",
+          "age": 30,
+          "birth": {
+            "date": "1996-03-19",
+            "place": "Glasgow",
+            "country": "Scotland"
+          },
+          "nationality": "England",
+          "height": "180 cm",
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/18270.png",
+          "position": "Goalkeeper"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 528695,
+          "name": "H. Foden",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/528695.png",
+          "position": null
+        },
+        "statistics": []
+      }
+    ],
+    "expiry": 1780800742183
+  },
+  "apif:player-teams:631": {
+    "value": [
+      {
+        "team": {
+          "id": 10,
+          "name": "England",
+          "logo": "https://media.api-sports.io/football/teams/10.png"
+        },
+        "seasons": [
+          2026,
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ]
+      },
+      {
+        "team": {
+          "id": 50,
+          "name": "Manchester City",
+          "logo": "https://media.api-sports.io/football/teams/50.png"
+        },
+        "seasons": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017,
+          2016
+        ]
+      },
+      {
+        "team": {
+          "id": 8190,
+          "name": "England U21",
+          "logo": "https://media.api-sports.io/football/teams/8190.png"
+        },
+        "seasons": [
+          2021,
+          2019
+        ]
+      },
+      {
+        "team": {
+          "id": 7197,
+          "name": "Manchester City U21",
+          "logo": "https://media.api-sports.io/football/teams/7197.png"
+        },
+        "seasons": []
+      },
+      {
+        "team": {
+          "id": 10332,
+          "name": "England U19",
+          "logo": "https://media.api-sports.io/football/teams/10332.png"
+        },
+        "seasons": [
+          2018
+        ]
+      },
+      {
+        "team": {
+          "id": 15637,
+          "name": "Manchester City U23",
+          "logo": "https://media.api-sports.io/football/teams/15637.png"
+        },
+        "seasons": []
+      },
+      {
+        "team": {
+          "id": 7914,
+          "name": "Manchester City U19",
+          "logo": "https://media.api-sports.io/football/teams/7914.png"
+        },
+        "seasons": []
+      },
+      {
+        "team": {
+          "id": 17949,
+          "name": "England U17",
+          "logo": "https://media.api-sports.io/football/teams/17949.png"
+        },
+        "seasons": [
+          2017
+        ]
+      },
+      {
+        "team": {
+          "id": 15381,
+          "name": "Manchester City U18",
+          "logo": "https://media.api-sports.io/football/teams/15381.png"
+        },
+        "seasons": []
+      }
+    ],
+    "expiry": 1781319142576
+  },
+  "apif:player-teams:528695": {
+    "value": [],
+    "expiry": 1781319142619
+  },
+  "apif:player-teams:382926": {
+    "value": [
+      {
+        "team": {
+          "id": 1375,
+          "name": "Morecambe",
+          "logo": "https://media.api-sports.io/football/teams/1375.png"
+        },
+        "seasons": [
+          2023,
+          2022
+        ]
+      }
+    ],
+    "expiry": 1781319142622
+  },
+  "apif:player-teams:18270": {
+    "value": [
+      {
+        "team": {
+          "id": 1823,
+          "name": "Gateshead",
+          "logo": "https://media.api-sports.io/football/teams/1823.png"
+        },
+        "seasons": [
+          2018
+        ]
+      },
+      {
+        "team": {
+          "id": 902,
+          "name": "Ross County",
+          "logo": "https://media.api-sports.io/football/teams/902.png"
+        },
+        "seasons": [
+          2017,
+          2016,
+          2015
+        ]
+      },
+      {
+        "team": {
+          "id": 4669,
+          "name": "Stirling Albion",
+          "logo": "https://media.api-sports.io/football/teams/4669.png"
+        },
+        "seasons": []
+      },
+      {
+        "team": {
+          "id": 1366,
+          "name": "Hartlepool",
+          "logo": "https://media.api-sports.io/football/teams/1366.png"
+        },
+        "seasons": [
+          2012
+        ]
+      }
+    ],
+    "expiry": 1781319142629
+  },
+  "apif:transfers:631": {
+    "value": [],
+    "expiry": 1781319142929
+  },
+  "apif:player:631:2024": {
+    "value": {
+      "player": {
+        "id": 631,
+        "name": "P. Foden",
+        "firstname": "Philip Walter",
+        "lastname": "Foden",
+        "age": 25,
+        "birth": {
+          "date": "2000-05-28",
+          "place": "Stockport",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "171",
+        "weight": "63",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/631.png",
+        "position": null
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://media.api-sports.io/football/teams/50.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 33,
+            "lineups": 26,
+            "minutes": 1786,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.239285",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 36,
+            "on": 16
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 852,
+            "key": 43,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 13,
+            "blocks": 1,
+            "interceptions": 9
+          },
+          "duels": {
+            "total": 143,
+            "won": 64
+          },
+          "dribbles": {
+            "attempts": 37,
+            "success": 14,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 34,
+            "committed": 5
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://media.api-sports.io/football/teams/50.png"
+          },
+          "league": {
+            "id": 45,
+            "name": "FA Cup",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/45.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 5,
+            "lineups": 4,
+            "minutes": 145,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.800000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 1,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 81,
+            "key": 4,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 8,
+            "won": 1
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://media.api-sports.io/football/teams/50.png"
+          },
+          "league": {
+            "id": 48,
+            "name": "League Cup",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/48.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 2,
+            "lineups": 2,
+            "minutes": 148,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.750000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 4,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 82,
+            "key": 2,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 8,
+            "won": 4
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://media.api-sports.io/football/teams/50.png"
+          },
+          "league": {
+            "id": 2,
+            "name": "UEFA Champions League",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/2.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 10,
+            "lineups": 8,
+            "minutes": 689,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.588888",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 21,
+            "on": 12
+          },
+          "goals": {
+            "total": 3,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 397,
+            "key": 19,
+            "accuracy": 40
+          },
+          "tackles": {
+            "total": 4,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 51,
+            "won": 25
+          },
+          "dribbles": {
+            "attempts": 20,
+            "success": 12,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 7,
+            "committed": 1
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 10,
+            "name": "England",
+            "logo": "https://media.api-sports.io/football/teams/10.png"
+          },
+          "league": {
+            "id": 10,
+            "name": "Friendlies",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/10.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 3,
+            "lineups": 3,
+            "minutes": 270,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.200000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 0
+          },
+          "shots": {
+            "total": 1,
+            "on": 1
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 28,
+            "key": 0,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 4,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 10,
+            "name": "England",
+            "logo": "https://media.api-sports.io/football/teams/10.png"
+          },
+          "league": {
+            "id": 4,
+            "name": "Euro Championship",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/4.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 7,
+            "lineups": 7,
+            "minutes": 622,
+            "number": 11,
+            "position": "Midfielder",
+            "rating": "7.13",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 6,
+            "bench": 0
+          },
+          "shots": {
+            "total": 10,
+            "on": 5
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 335,
+            "key": 6,
+            "accuracy": 43
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 46,
+            "won": 24
+          },
+          "dribbles": {
+            "attempts": 16,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 1
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 10,
+            "name": "England",
+            "logo": "https://media.api-sports.io/football/teams/10.png"
+          },
+          "league": {
+            "id": 5,
+            "name": "UEFA Nations League",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/5.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 2,
+            "lineups": 1,
+            "minutes": 82,
+            "number": 10,
+            "position": "Attacker",
+            "rating": "6.55",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 1,
+            "bench": 1
+          },
+          "shots": {
+            "total": 0,
+            "on": 0
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 35,
+            "key": 0,
+            "accuracy": 85
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 3,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 10,
+            "name": "England",
+            "logo": "https://media.api-sports.io/football/teams/10.png"
+          },
+          "league": {
+            "id": 32,
+            "name": "World Cup - Qualification Europe",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/32.png",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 4,
+            "lineups": 1,
+            "minutes": 150,
+            "number": 7,
+            "position": "Midfielder",
+            "rating": "6.98",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 1,
+            "bench": 3
+          },
+          "shots": {
+            "total": 1,
+            "on": 0
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 107,
+            "key": 6,
+            "accuracy": 92
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 9,
+            "won": 4
+          },
+          "dribbles": {
+            "attempts": 2,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    "expiry": 1780757542937
+  },
+  "apif:search:sancho": {
+    "value": [
+      {
+        "player": {
+          "id": 179425,
+          "name": "Eddy Sancho",
+          "firstname": "Eddy",
+          "lastname": "Sancho",
+          "age": 33,
+          "birth": {
+            "date": "1993-01-11",
+            "place": null,
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/179425.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 142557,
+          "name": "André Uva Sancho Santos",
+          "firstname": "André Uva",
+          "lastname": "Sancho Santos",
+          "age": 36,
+          "birth": {
+            "date": "1990-05-18",
+            "place": null,
+            "country": "Portugal"
+          },
+          "nationality": "Portugal",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/142557.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 311561,
+          "name": "Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/311561.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 349450,
+          "name": "Ayrton Sanchotene Silva",
+          "firstname": "Ayrton",
+          "lastname": "Sanchotene Silva",
+          "age": 31,
+          "birth": {
+            "date": "1994-08-13",
+            "place": "Cabo Frio",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/349450.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 379944,
+          "name": "A. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/379944.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 407692,
+          "name": "Jaime Gutiérrez Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/407692.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 317867,
+          "name": "Rafael Basáez Sancho",
+          "firstname": "Rafael",
+          "lastname": "Basáez Sancho",
+          "age": 24,
+          "birth": {
+            "date": "2002-05-22",
+            "place": null,
+            "country": "Chile"
+          },
+          "nationality": "Chile",
+          "height": "170 cm",
+          "weight": "67 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/317867.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 409933,
+          "name": "Adrián Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/409933.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 285599,
+          "name": "Daniel Pascual Sancho",
+          "firstname": "Daniel",
+          "lastname": "Pascual Sancho",
+          "age": 36,
+          "birth": {
+            "date": "1989-09-11",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/285599.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 178989,
+          "name": "David Sancho Arévalo",
+          "firstname": "David",
+          "lastname": "Sancho Arévalo",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/178989.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 186667,
+          "name": "Enrique Sancho Fernandez",
+          "firstname": "Enrique",
+          "lastname": "Sancho Fernandez",
+          "age": 0,
+          "birth": {
+            "date": "2026-06-06",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/186667.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 186965,
+          "name": "Abel Sancho Rodríguez",
+          "firstname": "Abel",
+          "lastname": "Sancho Rodríguez",
+          "age": 28,
+          "birth": {
+            "date": "1997-08-08",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/186965.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 196431,
+          "name": "Marcos Algas Sancho",
+          "firstname": "Marcos",
+          "lastname": "Algas Sancho",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/196431.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 332229,
+          "name": "Jordi Sancho Tomás",
+          "firstname": "Jordi",
+          "lastname": "Sancho Tomás",
+          "age": 23,
+          "birth": {
+            "date": "2002-07-30",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/332229.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 188226,
+          "name": "Daniel Sancho Clemente",
+          "firstname": "Daniel",
+          "lastname": "Sancho Clemente",
+          "age": 0,
+          "birth": {
+            "date": "2026-06-06",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/188226.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 170476,
+          "name": "Sergio Sancho Sanz",
+          "firstname": "Sergio",
+          "lastname": "Sancho Sanz",
+          "age": 30,
+          "birth": {
+            "date": "1995-07-12",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/170476.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 382837,
+          "name": "Joan Sancho",
+          "firstname": "Joan",
+          "lastname": "Sancho Rosal",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/382837.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 185897,
+          "name": "Tomeu Sancho",
+          "firstname": "Bartolomé",
+          "lastname": "Sancho Femenías",
+          "age": 32,
+          "birth": {
+            "date": "1993-09-22",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/185897.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 183194,
+          "name": "Iker Alegre Sancho",
+          "firstname": "Iker",
+          "lastname": "Alegre Sancho",
+          "age": 40,
+          "birth": {
+            "date": "1985-10-29",
+            "place": "Gijón",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "176 cm",
+          "weight": "65 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/183194.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 296552,
+          "name": "Jorge Sancho",
+          "firstname": "Jorge Sainz-Aja",
+          "lastname": "Sancho",
+          "age": 25,
+          "birth": {
+            "date": "2001-01-22",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/296552.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 436797,
+          "name": "Francisco Javier Penadés Sancho",
+          "firstname": "Francisco Javier",
+          "lastname": "Penadés Sancho",
+          "age": 36,
+          "birth": {
+            "date": "1990-04-07",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "179 cm",
+          "weight": "75 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/436797.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 186391,
+          "name": "Juanan Sancho",
+          "firstname": "Juan Antonio",
+          "lastname": "Sancho Macías",
+          "age": 34,
+          "birth": {
+            "date": "1992-03-20",
+            "place": "Mérida",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "180 cm",
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/186391.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 187834,
+          "name": "Bizen Pablo Sancho",
+          "firstname": "Bizen Pablo",
+          "lastname": "Sancho",
+          "age": 33,
+          "birth": {
+            "date": "1993-02-23",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "180 cm",
+          "weight": "79 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/187834.png",
+          "position": "Goalkeeper"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 332228,
+          "name": "Carlos Sancho",
+          "firstname": "Carlos",
+          "lastname": "Sancho Tomas",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/332228.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 193958,
+          "name": "J. Sancho",
+          "firstname": "Jocelyn",
+          "lastname": "Sancho",
+          "age": 26,
+          "birth": {
+            "date": "2000-05-10",
+            "place": "Montivilliers",
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/193958.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 286618,
+          "name": "Dídac Gordils Sancho",
+          "firstname": "Dídac",
+          "lastname": "Gordils Sancho",
+          "age": 24,
+          "birth": {
+            "date": "2001-12-03",
+            "place": "Tossa de Mar",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "174 cm",
+          "weight": "69 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/286618.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 105010,
+          "name": "Felipe  Sanchón Huerta",
+          "firstname": "Felipe",
+          "lastname": "Sanchón Huerta",
+          "age": 44,
+          "birth": {
+            "date": "1982-04-08",
+            "place": "Barcelona",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "164 cm",
+          "weight": "66 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/105010.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 69201,
+          "name": "Talisson Cristiano Sancho Araújo",
+          "firstname": "Talisson Cristiano",
+          "lastname": "Sancho Araújo",
+          "age": 28,
+          "birth": {
+            "date": "1997-10-19",
+            "place": null,
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/69201.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 14092,
+          "name": "K. Sancho",
+          "firstname": "Kevin Alberto",
+          "lastname": "Sancho Ramos",
+          "age": 42,
+          "birth": {
+            "date": "1984-04-13",
+            "place": null,
+            "country": "Costa Rica"
+          },
+          "nationality": "Costa Rica",
+          "height": "170 cm",
+          "weight": "67 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/14092.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 36260,
+          "name": "J. García Sancho",
+          "firstname": "Juan Carlos",
+          "lastname": "García Sancho Orozco",
+          "age": 31,
+          "birth": {
+            "date": "1994-11-10",
+            "place": "Tepic",
+            "country": "Mexico"
+          },
+          "nationality": "Mexico",
+          "height": "181 cm",
+          "weight": "76 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/36260.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 288627,
+          "name": "Alvaro Sebastián Villacorta Frisancho",
+          "firstname": "Alvaro Sebastián",
+          "lastname": "Villacorta Frisancho",
+          "age": 25,
+          "birth": {
+            "date": "2001-01-16",
+            "place": "Lima",
+            "country": "Peru"
+          },
+          "nationality": "Peru",
+          "height": "178 cm",
+          "weight": "72 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/288627.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 113839,
+          "name": "Elinton Sanchotene Andrade",
+          "firstname": "Elinton Sanchotene",
+          "lastname": "Andrade",
+          "age": 47,
+          "birth": {
+            "date": "1979-03-30",
+            "place": "Rio Grande do Sul",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "189 cm",
+          "weight": "85 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/113839.png",
+          "position": "Goalkeeper"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 23800,
+          "name": "P. Sancho",
+          "firstname": "Patricio Fernando",
+          "lastname": "Sancho",
+          "age": 30,
+          "birth": {
+            "date": "1996-05-10",
+            "place": null,
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/23800.png",
+          "position": "Goalkeeper"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 335491,
+          "name": "Dani Sancho",
+          "firstname": "Daniel",
+          "lastname": "Sancho Macaya",
+          "age": 24,
+          "birth": {
+            "date": "2002-01-30",
+            "place": "Pamplona",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": "188 cm",
+          "weight": "78 kg",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/335491.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 382662,
+          "name": "Lucas Sancho",
+          "firstname": "Lucas",
+          "lastname": "Sancho Martínez",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/382662.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 386215,
+          "name": "Luis Sancho",
+          "firstname": "Luis",
+          "lastname": "Sancho Radoselovics",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/386215.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 416659,
+          "name": "Alonso Sancho",
+          "firstname": "Alonso",
+          "lastname": "Sancho Blanco",
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/416659.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 179678,
+          "name": "Pedro Sancho",
+          "firstname": "Pedro Miguel",
+          "lastname": "Esteves Sancho",
+          "age": 24,
+          "birth": {
+            "date": "2002-01-13",
+            "place": null,
+            "country": "Portugal"
+          },
+          "nationality": "Portugal",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/179678.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 86103,
+          "name": "Tiphaine Sancho",
+          "firstname": "Tiphaine",
+          "lastname": "Sancho",
+          "age": 36,
+          "birth": {
+            "date": "1990-04-08",
+            "place": null,
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/86103.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 161598,
+          "name": "Jaime Sancho",
+          "firstname": "Jaime",
+          "lastname": "Sancho González",
+          "age": 25,
+          "birth": {
+            "date": "2000-09-01",
+            "place": "Zaragoza",
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/161598.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 18,
+          "name": "J. Sancho",
+          "firstname": "Jadon Malik",
+          "lastname": "Sancho",
+          "age": 26,
+          "birth": {
+            "date": "2000-03-25",
+            "place": "London",
+            "country": "England"
+          },
+          "nationality": "England",
+          "height": "180",
+          "weight": "76",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/18.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 445877,
+          "name": "Jorge  Cestero Sancho",
+          "firstname": "Jorge",
+          "lastname": "Cestero Sancho",
+          "age": 20,
+          "birth": {
+            "date": "2006-03-24",
+            "place": null,
+            "country": "Spain"
+          },
+          "nationality": "Spain",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/445877.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 475477,
+          "name": "Diogo Sancho",
+          "firstname": "Diogo",
+          "lastname": "Esteves Sancho",
+          "age": 20,
+          "birth": {
+            "date": "2005-10-10",
+            "place": null,
+            "country": "Portugal"
+          },
+          "nationality": "Portugal",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/475477.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 475478,
+          "name": "Francisco Sancho",
+          "firstname": "Francisco",
+          "lastname": "Esteves Sancho",
+          "age": 20,
+          "birth": {
+            "date": "2005-10-10",
+            "place": null,
+            "country": "Portugal"
+          },
+          "nationality": "Portugal",
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/475478.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 512601,
+          "name": "Diego Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 17,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/512601.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 554759,
+          "name": "J. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 30,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/554759.png",
+          "position": "Defender"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 554478,
+          "name": "J. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 25,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/554478.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 560905,
+          "name": "J. Cestero Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 19,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/560905.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 568311,
+          "name": "D. Sancho Rubio",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/568311.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 586416,
+          "name": "Daniel Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 23,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/586416.png",
+          "position": "Attacker"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 637544,
+          "name": "Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/637544.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 637641,
+          "name": "J. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": 17,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/637641.png",
+          "position": "Midfielder"
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 644694,
+          "name": "J. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/644694.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 652192,
+          "name": "L. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/652192.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 653142,
+          "name": "F. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/653142.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 654251,
+          "name": "D. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/654251.png",
+          "position": null
+        },
+        "statistics": []
+      },
+      {
+        "player": {
+          "id": 658404,
+          "name": "A. Sancho",
+          "firstname": null,
+          "lastname": null,
+          "age": null,
+          "birth": {
+            "date": null,
+            "place": null,
+            "country": null
+          },
+          "nationality": null,
+          "height": null,
+          "weight": null,
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/658404.png",
+          "position": null
+        },
+        "statistics": []
+      }
+    ],
+    "expiry": 1780800767215
+  },
+  "apif:player-teams:179425": {
+    "value": [
+      {
+        "team": {
+          "id": 9257,
+          "name": "Grasse",
+          "logo": "https://media.api-sports.io/football/teams/9257.png"
+        },
+        "seasons": []
+      }
+    ],
+    "expiry": 1781319167591
+  },
+  "apif:player-teams:379944": {
+    "value": [],
+    "expiry": 1781319167654
+  },
+  "apif:player-teams:311561": {
+    "value": [],
+    "expiry": 1781319167671
+  },
+  "apif:player-teams:142557": {
+    "value": [],
+    "expiry": 1781319167676
+  },
+  "apif:player-teams:407692": {
+    "value": [],
+    "expiry": 1781319167683
+  },
+  "apif:player-teams:349450": {
+    "value": [],
+    "expiry": 1781319167694
+  }
+}
