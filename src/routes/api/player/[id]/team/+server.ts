@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { z } from 'zod';
 import { getPlayerTeams } from '$lib/api/football';
+import { apiErrorBody, apiErrorStatus } from '$lib/server/apiErrors';
 import { get as cacheGet } from '$lib/utils/cache';
 import type { ApiPlayerItem } from '$lib/api/football';
 
@@ -33,7 +34,7 @@ export const GET: RequestHandler = async (event) => {
 	// 2. Otherwise, fetch teams list using our cached API helper
 	const { data, error } = await getPlayerTeams(idNum);
 	if (error) {
-		return json({ error }, { status: 500 });
+		return json(apiErrorBody(error), { status: apiErrorStatus(error) });
 	}
 
 	if (!data || data.length === 0) {
@@ -51,13 +52,54 @@ export const GET: RequestHandler = async (event) => {
 	// Let's look at the teams and select the one that doesn't match a list of common country names,
 	// or simply take the first one that is a club if possible, or just the first one if all else fails.
 	const nationalTeamNames = [
-		'argentina', 'brazil', 'france', 'england', 'germany', 'spain', 'italy',
-		'portugal', 'netherlands', 'belgium', 'uruguay', 'colombia', 'chile', 'mexico',
-		'usa', 'canada', 'morocco', 'senegal', 'egypt', 'nigeria', 'cameroon', 'ghana',
-		'japan', 'south korea', 'australia', 'saudi arabia', 'croatia', 'sweden',
-		'norway', 'denmark', 'switzerland', 'austria', 'poland', 'ukraine', 'wales',
-		'scotland', 'ireland', 'turkey', 'greece', 'ecuador', 'peru', 'venezuela',
-		'paraguay', 'bolivia', 'algeria', 'tunisia', 'ivory coast', 'indonesia'
+		'argentina',
+		'brazil',
+		'france',
+		'england',
+		'germany',
+		'spain',
+		'italy',
+		'portugal',
+		'netherlands',
+		'belgium',
+		'uruguay',
+		'colombia',
+		'chile',
+		'mexico',
+		'usa',
+		'canada',
+		'morocco',
+		'senegal',
+		'egypt',
+		'nigeria',
+		'cameroon',
+		'ghana',
+		'japan',
+		'south korea',
+		'australia',
+		'saudi arabia',
+		'croatia',
+		'sweden',
+		'norway',
+		'denmark',
+		'switzerland',
+		'austria',
+		'poland',
+		'ukraine',
+		'wales',
+		'scotland',
+		'ireland',
+		'turkey',
+		'greece',
+		'ecuador',
+		'peru',
+		'venezuela',
+		'paraguay',
+		'bolivia',
+		'algeria',
+		'tunisia',
+		'ivory coast',
+		'indonesia'
 	];
 
 	// Sort teams so that the one with the highest season is first
@@ -68,9 +110,7 @@ export const GET: RequestHandler = async (event) => {
 	});
 
 	// Try to find the first team that is likely not a national team
-	let selected = sorted.find(
-		(item) => !nationalTeamNames.includes(item.team.name.toLowerCase())
-	);
+	let selected = sorted.find((item) => !nationalTeamNames.includes(item.team.name.toLowerCase()));
 
 	// If all are national teams or we filtered everything, take the first one
 	if (!selected && sorted.length > 0) {

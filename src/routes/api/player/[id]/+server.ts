@@ -2,9 +2,11 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { z } from 'zod';
 import { getPlayerWithStats, getPlayerTransfers } from '$lib/api/football';
+import { apiErrorBody, apiErrorStatus } from '$lib/server/apiErrors';
 import type { PlayerData } from '$lib/schemas/playerData';
 
 const idSchema = z.string().regex(/^\d+$/);
+const seasonSchema = z.string().regex(/^\d{4}$/);
 
 export const GET: RequestHandler = async (event) => {
 	const idParam = event.params.id || '';
@@ -15,7 +17,12 @@ export const GET: RequestHandler = async (event) => {
 
 	const idStr = parsed.data;
 	const idNum = parseInt(idStr, 10);
-	const season = parseInt(event.url.searchParams.get('season') || '2024', 10);
+	const seasonParam = event.url.searchParams.get('season') || '2024';
+	const parsedSeason = seasonSchema.safeParse(seasonParam);
+	if (!parsedSeason.success) {
+		return json({ error: 'Season must be a 4-digit year (e.g. 2024).' }, { status: 400 });
+	}
+	const season = parseInt(parsedSeason.data, 10);
 
 	// Fetch player stats + transfer history in parallel from API-Football
 	// (Transfermarkt API is non-functional; we use API-Football /transfers instead)
@@ -25,7 +32,8 @@ export const GET: RequestHandler = async (event) => {
 	]);
 
 	if (playerResult.error) {
-		return json({ error: `API-Football error: ${playerResult.error}` }, { status: 500 });
+		const message = `API-Football error: ${playerResult.error}`;
+		return json(apiErrorBody(message), { status: apiErrorStatus(message) });
 	}
 	if (!playerResult.data) {
 		return json({ error: 'Player not found.' }, { status: 404 });

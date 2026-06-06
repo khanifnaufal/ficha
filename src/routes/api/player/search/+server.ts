@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { z } from 'zod';
 import { searchPlayers } from '$lib/api/football';
+import { apiErrorBody, apiErrorStatus } from '$lib/server/apiErrors';
 
 const querySchema = z.string().min(3).max(50);
 
@@ -19,7 +20,7 @@ export const GET: RequestHandler = async (event) => {
 
 	const { data, error } = await searchPlayers(parsed.data);
 	if (error) {
-		return json({ error }, { status: 500 });
+		return json(apiErrorBody(error), { status: apiErrorStatus(error) });
 	}
 
 	if (!data || data.length === 0) {

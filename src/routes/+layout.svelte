@@ -3,22 +3,10 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import logo from '$lib/assets/logo.png';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import { onMount } from 'svelte';
 	import { navigating } from '$app/stores';
 	import { fade } from 'svelte/transition';
 
 	let { children } = $props();
-
-	// Sync theme state on mount — the actual class is already applied by the
-	// inline script in app.html before first paint, so no flash occurs.
-	onMount(() => {
-		const savedTheme = localStorage.getItem('ficha_theme');
-		if (savedTheme === 'light') {
-			document.documentElement.classList.add('light');
-		} else {
-			document.documentElement.classList.remove('light');
-		}
-	});
 
 	// Track navigation to drive page transition
 	let pageKey = $state(0);

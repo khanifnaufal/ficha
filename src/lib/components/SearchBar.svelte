@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
+	import ErrorState from '$lib/components/ErrorState.svelte';
+	import Skeleton from '$lib/components/Skeleton.svelte';
 	import type { ApiFootballPlayerItem } from '$lib/schemas/apiFootball';
 
 	let {
@@ -13,6 +15,9 @@
 	let inputVal = $state('');
 	let debounceTimeout: ReturnType<typeof setTimeout> | undefined;
 	let abortController: AbortController | null = null;
+	let errorStatus = $state<number | null>(null);
+	let retryAfter = $state<number | null>(null);
+	const skeletonRows = [0, 1, 2];
 
 	// Synchronize external clears (like clicking a recent search or clearing all)
 	$effect(() => {
@@ -27,6 +32,8 @@
 			results = [];
 			loading = false;
 			error = '';
+			errorStatus = null;
+			retryAfter = null;
 			query = trimmed;
 			return;
 		}
@@ -34,6 +41,8 @@
 		query = trimmed;
 		loading = true;
 		error = '';
+		errorStatus = null;
+		retryAfter = null;
 
 		// Cancel the previous active request
 		if (abortController) {
@@ -47,7 +56,12 @@
 			});
 
 			if (!res.ok) {
-				const data = await res.json();
+				const data = await res.json().catch(() => ({}));
+				errorStatus = res.status;
+				retryAfter =
+					typeof data.retryAfter === 'number'
+						? data.retryAfter
+						: Number(res.headers.get('retry-after')) || null;
 				throw new Error(data.error || 'Failed to fetch results');
 			}
 
@@ -89,6 +103,8 @@
 			loading = false;
 			results = [];
 			error = '';
+			errorStatus = null;
+			retryAfter = null;
 			query = inputVal.trim();
 		}
 	}
@@ -100,6 +116,8 @@
 			results = [];
 			loading = false;
 			error = '';
+			errorStatus = null;
+			retryAfter = null;
 			if (abortController) abortController.abort();
 		} else if (e.key === 'Enter') {
 			if (results.length > 0) {
@@ -169,8 +187,10 @@
 						results = [];
 						loading = false;
 						error = '';
+						errorStatus = null;
+						retryAfter = null;
 					}}
-					class="cursor-pointer rounded-md p-0.5 text-text-muted transition-colors hover:bg-surface-raised hover:text-text"
+					class="cursor-pointer rounded-md p-0.5 text-text-muted transition-colors hover:bg-surface-raised hover:text-text focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:outline-none"
 					title="Clear search"
 				>
 					<svg
@@ -188,43 +208,37 @@
 		</div>
 	</div>
 
+	{#if loading && query.length >= 3}
+		<div class="mt-4 flex flex-col gap-2" aria-label="Loading search results">
+			{#each skeletonRows as index (index)}
+				<div class="flex items-center gap-4 rounded-xl border border-border bg-surface p-3.5">
+					<Skeleton variant="circle" width="3rem" height="3rem" />
+					<div class="flex min-w-0 grow flex-col gap-2">
+						<Skeleton variant="text" width={index === 1 ? '44%' : '58%'} />
+						<Skeleton variant="text" width={index === 2 ? '68%' : '76%'} height="0.75rem" />
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
+
 	<!-- Error / Empty State messaging -->
 	{#if error}
-		<div class="mt-3 flex items-center gap-1.5 px-1 text-xs font-medium text-red-500/90">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 20 20"
-				fill="currentColor"
-				class="h-4 w-4 text-red-500"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-			{error}
+		<div class="mt-4">
+			<ErrorState
+				title={errorStatus === 429 ? 'Rate limit hit' : 'Search unavailable'}
+				message={error}
+				variant={errorStatus === 429 ? 'rate-limit' : 'api'}
+				{retryAfter}
+			/>
 		</div>
 	{:else if query.length >= 3 && !loading && results.length === 0}
-		<div
-			class="mt-4 rounded-xl border border-dashed border-border bg-surface/30 p-6 text-center text-text-muted"
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="mx-auto mb-2 h-8 w-8 text-text-muted/50"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M15.182 16.318A4.486 4.486 0 0 0 12.016 15a4.486 4.486 0 0 0-3.198 1.318M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
-				/>
-			</svg>
-			<p class="text-sm font-semibold text-text sm:text-base">No players found</p>
-			<p class="mt-1 text-xs text-text-muted/80">We couldn't find any player matching "{query}"</p>
+		<div class="mt-4">
+			<ErrorState
+				title="No players found"
+				message={`We couldn't find any player matching "${query}".`}
+				variant="empty"
+			/>
 		</div>
 	{/if}
 </div>

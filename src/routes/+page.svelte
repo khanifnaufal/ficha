@@ -69,6 +69,10 @@
 
 <svelte:head>
 	<title>Ficha - Player Search</title>
+	<meta
+		name="description"
+		content="Search football players and open concise Ficha profiles with club, nationality, statistics, transfers, and market context."
+	/>
 </svelte:head>
 
 <div
