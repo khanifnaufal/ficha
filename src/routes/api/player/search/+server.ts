@@ -2,25 +2,10 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { z } from 'zod';
 import { searchPlayers } from '$lib/api/football';
-import { isRateLimited } from '$lib/utils/rateLimit';
 
 const querySchema = z.string().min(3).max(50);
 
 export const GET: RequestHandler = async (event) => {
-	const ip = event.getClientAddress();
-	const { limited, retryAfter } = isRateLimited(`search:${ip}`, 10);
-	if (limited) {
-		return json(
-			{ error: 'Too many requests' },
-			{
-				status: 429,
-				headers: {
-					'Retry-After': String(retryAfter)
-				}
-			}
-		);
-	}
-
 	const qParam = event.url.searchParams.get('q') || '';
 	const trimmedQuery = qParam.trim();
 
@@ -37,9 +22,26 @@ export const GET: RequestHandler = async (event) => {
 		return json({ error }, { status: 500 });
 	}
 
-	if (!data) {
+	if (!data || data.length === 0) {
 		return json({ results: [] });
 	}
 
-	return json({ results: data.response });
+	// API-Football /players/profiles returns players with no statistics array
+	// We map them directly to ApiFootballPlayerItem shape for the frontend
+	const results = data.map((item) => ({
+		player: {
+			id: item.player.id,
+			name: item.player.name,
+			photo: item.player.photo,
+			nationality: item.player.nationality,
+			age: item.player.age,
+			birth: item.player.birth,
+			height: item.player.height,
+			weight: item.player.weight,
+			injured: item.player.injured
+		},
+		statistics: item.statistics // empty [] from /profiles, that's fine
+	}));
+
+	return json({ results });
 };

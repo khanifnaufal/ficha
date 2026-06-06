@@ -3,7 +3,7 @@ import * as env from '$env/static/private';
 
 const envSchema = z.object({
 	API_FOOTBALL_KEY: z.string().min(1, 'API_FOOTBALL_KEY is required'),
-	API_FOOTBALL_URL: z.string().url('API_FOOTBALL_URL must be a valid URL'),
+	API_FOOTBALL_URL: z.string().min(1, 'API_FOOTBALL_URL is required'),
 	TRANSFERMARKT_KEY: z.string().min(1, 'TRANSFERMARKT_KEY is required'),
 	TRANSFERMARKT_URL: z.string().url('TRANSFERMARKT_URL must be a valid URL')
 });

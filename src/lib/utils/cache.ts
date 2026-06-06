@@ -7,7 +7,9 @@ const cache = new Map<string, CacheEntry<unknown>>();
 
 export const CACHE_TTLS = {
 	MARKET_VALUE: 7 * 24 * 60 * 60 * 1000, // 7 days
-	STATS: 1 * 60 * 60 * 1000 // 1 hour
+	STATS: 6 * 60 * 60 * 1000, // 6 hours (was 1h, player stats don't change that fast)
+	SEARCH: 24 * 60 * 60 * 1000, // 24 hours — search results barely change day-to-day
+	PROFILE: 12 * 60 * 60 * 1000 // 12 hours for player bio
 };
 
 export function get<T>(key: string): T | null {

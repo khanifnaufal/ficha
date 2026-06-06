@@ -84,7 +84,7 @@
 			loading = true; // Set loading state immediately for snappy user feedback
 			debounceTimeout = setTimeout(() => {
 				performSearch(inputVal);
-			}, 400);
+			}, 800); // 800ms debounce — conserves API quota (100 calls/day free tier)
 		} else {
 			loading = false;
 			results = [];
